@@ -21,3 +21,4 @@ DIC1: personal page with antigravity and github
 - `image_1.png`: 復古終端機風格背景圖。
 - `homepage.png`: 網頁預覽截圖。
 - `README.md`: 專案開發紀錄（本檔案）。
+<img width="759" height="501" alt="image" src="https://github.com/user-attachments/assets/a3550b6c-37bf-4a6c-8faf-9a0abeafefcd" />

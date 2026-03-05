@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SYS.ADMIN // CHEN ZHENGYUAN</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="terminal-loader">
+        <div class="terminal-header">sys.admin@master:~$ ./show_profile.sh</div>
+        <div class="terminal-body">
+            <p><strong>[STATUS]</strong> NETWORK ONLINE...</p>
+            <p><strong>[USER]</strong> Hello, I am <span class="highlight">Chen Zhengyuan</span>.</p>
+            <p><strong>[DESC]</strong> Welcome to my core node.</p>
+            <div id="clock-container">
+                <p><strong>[TIMESTAMP]</strong> <span id="current-time"></span><span class="cursor">_</span></p>
+            </div>
+            <p><strong>[ROOT]</strong> DRL-DIC1 PROJECT ACTIVE.</p>
+        </div>
+    </div>
+
+    <script>
+        function updateTime() {
+            const now = new Date();
+            const year = now.getFullYear();
+            const month = String(now.getMonth() + 1).padStart(2, '0');
+            const day = String(now.getDate()).padStart(2, '0');
+            const hours = String(now.getHours()).padStart(2, '0');
+            const minutes = String(now.getMinutes()).padStart(2, '0');
+            const seconds = String(now.getSeconds()).padStart(2, '0');
+            
+            // 終端機常用格式: YYYY-MM-DD HH:MM:SS
+            const terminalFormat = `${year}-${month}-${day} ${hours}:${minutes}:${seconds}`;
+            document.getElementById('current-time').innerText = terminalFormat;
+        }
+        setInterval(updateTime, 1000);
+        updateTime();
+    </script>
+</body>
+</html>
